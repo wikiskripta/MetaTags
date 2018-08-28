@@ -6,7 +6,7 @@
 	"description": "Add custom meta tags to wiki pages",
 	"type": "other",
 	"requires": {
-		"MediaWiki": ">= 1.28.0"
+		"MediaWiki": ">= 1.29.0"
 	},
 	"AutoloadClasses": {
 		"MetaTagsHooks": "MetaTagsHooks.php"
