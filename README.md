@@ -11,7 +11,7 @@ Mediawiki extension.
 ## Installation
 
 * Make sure you have MediaWiki 1.29+ installed.
-* Download and place the extension to your /extensions/ folder.
+* Download and place the extension to your _/extensions/_ folder.
 * Add the following code to your LocalSettings.php: 
 ```
 wfLoadExtension( 'MetaTags' );
