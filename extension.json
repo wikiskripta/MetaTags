@@ -1,0 +1,19 @@
+{
+	"name": "Add metas",
+	"version": "1.0",
+	"author": "Josef Martiňák",
+	"url": "https://bitbucket.org/wikiskripta/metatags",
+	"description": "Add custom meta tags to wiki pages",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.28.0"
+	},
+	"AutoloadClasses": {
+		"MetaTagsHooks": "MetaTagsHooks.php"
+	},
+	"status": "stable",
+	"Hooks": {
+		"BeforePageDisplay": "MetaTagsHooks::addMetaTags"
+	},
+	"manifest_version": 2
+}
