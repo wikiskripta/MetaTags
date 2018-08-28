@@ -1,9 +1,10 @@
 {
-	"name": "Add metas",
+	"name": "MetaTags",
 	"version": "1.0",
-	"author": "Josef Martiňák",
+	"author": ["Josef Martiňák","Luis Diaz"],
 	"url": "https://bitbucket.org/wikiskripta/metatags",
 	"description": "Add custom meta tags to wiki pages",
+	"license-name": "MIT",
 	"type": "other",
 	"requires": {
 		"MediaWiki": ">= 1.29.0"
