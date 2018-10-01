@@ -1,7 +1,10 @@
 {
 	"name": "MetaTags",
 	"version": "1.0",
-	"author": ["Josef Martiňák","Luis Diaz"],
+	"author": [
+		"[https://www.wikiskripta.eu/w/User:Josmart Josef Martiňák]",
+		"Luis Diaz"
+	],
 	"url": "https://bitbucket.org/wikiskripta/metatags",
 	"description": "Add custom meta tags to wiki pages",
 	"license-name": "MIT",
