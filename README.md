@@ -22,4 +22,4 @@ wfLoadExtension( 'MetaTags' );
 ## Authors and license
 
 * [Josef Martiňák](https://www.wikiskripta.eu/w/User:Josmart), Luis Diaz
-* MIT License, Copyright (c) 2018 First Faculty of Medicine, Charles University
+* MIT License, Copyright (c) 2023 First Faculty of Medicine, Charles University
