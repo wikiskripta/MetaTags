@@ -1,23 +1,27 @@
 {
 	"name": "MetaTags",
-	"version": "1.0",
+	"version": "1.1.1",
 	"author": [
 		"[https://www.wikiskripta.eu/w/User:Josmart Josef Martiňák]",
 		"Luis Diaz"
 	],
 	"url": "https://bitbucket.org/wikiskripta/metatags",
-	"description": "Add custom meta tags to wiki pages",
+	"descriptionmsg": "metatags-desc",
 	"license-name": "MIT",
 	"type": "other",
 	"requires": {
-		"MediaWiki": ">= 1.29.0"
+		"MediaWiki": ">= 1.45.0"
 	},
 	"AutoloadClasses": {
 		"MetaTagsHooks": "MetaTagsHooks.php"
 	},
-	"status": "stable",
 	"Hooks": {
 		"BeforePageDisplay": "MetaTagsHooks::addMetaTags"
+	},
+	"MessagesDirs": {
+		"MetaTags": [
+			"i18n"
+		]
 	},
 	"manifest_version": 2
 }

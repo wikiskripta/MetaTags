@@ -1,25 +1,44 @@
 <?php
 
-/**
- * All hooked functions used by MetaTags
- */
+declare( strict_types = 1 );
 
+use MediaWiki\Output\OutputPage;
+use MediaWiki\Skin\Skin;
+use MediaWiki\Title\Title;
+
+/**
+ * Hook handlers for the MetaTags extension.
+ */
 class MetaTagsHooks {
 
 	/**
-	 * Add meta tags to a page
-	 * @param object $out: instance of OutputPage
-	 * @param object $skin: instance of Skin, unused
+	 * Adds standard meta tags to article pages.
+	 *
+	 * @param OutputPage $out
+	 * @param Skin $skin
 	 */
-	public static function addMetaTags( &$out, &$skin ) {
-
-		if( $out->isArticle() ) {
-			$name = $out->getTitle()->getPrefixedDBKey();
-			$out->addMeta( 'keywords', $out->msg('head-keywords')->text() );
-			$out->addMeta( 'author', $out->msg('head-author')->text() );
-			$out->addMeta( 'description', $out->msg('head-description')->text() );
+	public static function addMetaTags( OutputPage $out, Skin $skin ): void {
+		$title = $out->getTitle();
+		if ( !$title instanceof Title || !$out->isArticle() ) {
+			return;
 		}
-		return true;
-		
+
+		self::addMessageMetaTag( $out, 'keywords', 'head-keywords' );
+		self::addMessageMetaTag( $out, 'author', 'head-author' );
+		self::addMessageMetaTag( $out, 'description', 'head-description' );
+	}
+
+	/**
+	 * Adds a meta tag when the message exists and is not blank.
+	 *
+	 * @param OutputPage $out
+	 * @param string $name
+	 * @param string $messageKey
+	 */
+	private static function addMessageMetaTag( OutputPage $out, string $name, string $messageKey ): void {
+		$value = trim( $out->msg( $messageKey )->text() );
+		if ( $value !== '' ) {
+			$out->addMeta( $name, $value );
+		}
 	}
 }
